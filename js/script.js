@@ -16,14 +16,16 @@ function playGame(playerInput) {
 
     function displayResult(argComputerMove, argPlayerMove) {
         if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
-            return ('Ty wygrywasz!');
+            return 'Ty wygrywasz!';
         } else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
-            return ('Ty wygrywasz!');
+            return 'Ty wygrywasz!';
         } else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
-            return ('Ty wygrywasz!');
+            return 'Ty wygrywasz!';
         } else if (argComputerMove == argPlayerMove) {
-            return ('Remis')
-        } else return ('Przegrywasz!');
+            return 'Remis';
+        } else {
+            return 'Przegrywasz!'
+        };
     }
 
     let randomNumber = Math.floor(Math.random() * 3 + 1);
